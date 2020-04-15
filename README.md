@@ -33,7 +33,7 @@ following Instructions under [this repository](https://github.com/akmenon1996/Ha
 
 - Upload a picture of a painting. (There are a few sample images that you can use in the /uploads folder. 
 
-:point_down: Screenshot:
+Screenshot :point_down:  :
 
 <p align="center">
   <img src="https://github.com/akmenon1996/Artwork-artist-prediction-webapp/blob/master/display_outputs/home_page.png" height="480px" alt="">
