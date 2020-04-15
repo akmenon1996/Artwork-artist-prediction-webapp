@@ -25,6 +25,9 @@ following Instructions under [this repository](https://github.com/akmenon1996/Ha
  ```shell
  $ python app.py
  ```
+ <p align="center">
+  <img src="https://github.com/akmenon1996/Artwork-artist-prediction-webapp/blob/master/display_outputs/flask_running.png" height="240px" alt="">
+</p>
 
 - Go to http://localhost:5000 (Preferebly on a Safari/Mozilla browser)
 
