@@ -74,7 +74,7 @@ def artist_predict(uploaded_image):
         os.remove(f)
     image_val = uploaded_image
     train_input_shape = (224, 224, 3)
-    model = load_model('models/weights-improvement-13-0.79.hdf5')
+    model = load_model('/Users/abhijit/Desktop/GIT_Projects/Artwork-artist-prediction-webapp/models/trained_model.hdf5')
     with open('models/labels.pickle', 'rb') as handle:
       labels = pickle.load(handle)
     uploaded_image = cv2.resize(uploaded_image, dsize=train_input_shape[0:2], )

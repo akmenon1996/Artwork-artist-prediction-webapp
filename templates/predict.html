@@ -3,7 +3,7 @@
     <!doctype html>
     <title>Results</title>
 
-    <img src="{{ returned_image }}" width="1000" height="1000" alt="Predicted Artist --> {{ artist }}, Prediction Estimate --> {{ perc }}" />
+    <img src="{{ returned_image }}" width="600" height="600" alt="Predicted Artist --> {{ artist }}, Prediction Estimate --> {{ perc }}" />
     <h3>Dominant color is - {{ color_result }}</h3>
     <form method=post enctype=multipart/form-data>
       <input type=file name=file accept="image/*" onchange="loadFile(event)">
