@@ -94,7 +94,7 @@ def artist_predict(uploaded_image):
     fig = Figure()
     axis = fig.add_subplot(1, 1, 1)
     axis.set_title(title)
-    axis.imshow(image_val)
+    axis.imshow(image_val[...,::-1])
 
     pngImage = io.BytesIO()
     FigureCanvas(fig).print_png(pngImage)
