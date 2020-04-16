@@ -7,18 +7,14 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras import backend as K
 import pickle
-import imageio
-import matplotlib.pyplot as plt
-import string
-import random
 import io
-import random
-from flask import Response
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
-import glob, os, os.path
+import os, os.path
 import base64
-import time
+import webbrowser
+
+
 
 UPLOAD_FOLDER = './uploads/'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
@@ -104,7 +100,9 @@ def artist_predict(uploaded_image):
     return (pngImageB64String,artist,probability_perc)
 
 
-
+@app.route('/about')
+def my_page():
+    return webbrowser.open_new_tab('https://github.com/akmenon1996/Artwork-artist-prediction-webapp/blob/master/README.md')
 
 def getDominantColor(image):
     '''returns the dominate color among Blue, Green and Reds in the image '''
