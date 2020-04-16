@@ -68,13 +68,9 @@ def upload_file():
 
 
 def artist_predict(uploaded_image):
-    mydir = '/Users/abhijit/Desktop/GIT_Projects/CV-webapp/static'
-    filelist = glob.glob(os.path.join(mydir,"*.png"))
-    for f in filelist:
-        os.remove(f)
     image_val = uploaded_image
     train_input_shape = (224, 224, 3)
-    model = load_model('/Users/abhijit/Desktop/GIT_Projects/Artwork-artist-prediction-webapp/models/trained_model.hdf5')
+    model = load_model('models/trained_model.hdf5')
     with open('models/labels.pickle', 'rb') as handle:
       labels = pickle.load(handle)
     uploaded_image = cv2.resize(uploaded_image, dsize=train_input_shape[0:2], )
@@ -121,4 +117,4 @@ def getDominantColor(image):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
